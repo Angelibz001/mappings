@@ -1,0 +1,61 @@
+Mappings
+
+son como diccionarios {a: 2, b:3} (keys => value) 
+En caso de que no exista la variable da el valor por default
+
+Create
+notación:
+mapping[key] = value
+
+Read
+mapping[key]
+
+Update
+mapping[key] = second value
+
+Remove
+delete mapping[key]
+
+Exotic mapping (nested)
+
+Create
+
+mapping(address => (address => bool)) isvalue
+
+isvalue[msg.sender][some address] =true
+
+notación:
+
+mapping(key1 => (key2 => value)) isvalue
+mapping[key1][key 2] = value
+
+Read
+mapping[key1][key 2]
+
+update
+mapping[key1][key 2] = value 2
+
+delete
+mapping[key1][key 2]
+
+Exotic mapping (arrays)
+
+Create
+
+mapping(address => uint[]) isvalue
+
+isvalue[msg.sender].push()
+
+notación:
+
+mapping(key1 => value[]) isvalue
+mapping[key1].push()
+
+Read
+mapping[key1][index]
+
+update
+mapping[key1][index] = value 2
+
+delete
+delete mapping[key1][index]
